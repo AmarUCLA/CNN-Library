@@ -48,6 +48,10 @@ try:
 except FileNotFoundError:
     print("Config file missing")
 
+#remove me if config file works
+config = {"parameters": {"num_epochs": 10,"learning_rate": 0.001,"batch_size": 128,"image_resolution": 320,"MNIST": False,"n_classes": 7,"optimizer": "sgd"}}
+
+
 """Dataset Initialization"""
 data_initialization = initialize_dataset(image_resolution=config['parameters']['image_resolution'], batch_size=config['parameters']['batch_size'], 
                       MNIST=config['parameters']['MNIST'])
