@@ -2,7 +2,6 @@ import argparse
 
 import torch
 import yaml
-from torchstat import stat
 
 from convNet import CNN
 from AlexNet import AlexNet
@@ -27,7 +26,7 @@ from ResMLP import ResMLP
 from gMLP import gMLPForImageClassification
 from EfficientNetV2 import EfficientNetV2
 
-from dataset import initialize_dataset
+from Data.dataset import initialize_dataset
 from train_test import Training
 from trainAndTestWithSAM import TrainingWithSAM
 
