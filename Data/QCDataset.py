@@ -27,6 +27,8 @@ class QCDataset(Dataset):
 
         fullMaskDir = self.mask_dir + slideName + '.csv'
         maskDF = pd.read_csv(fullMaskDir)
+        tileNumber = tileNumber.split(' ', 1)
+        tileNumber = tileNumber[0]
         tileRow =  maskDF[maskDF['Tile Number'] == int(tileNumber)]
 
         selectedLabel = int(tileRow['selectedLabel'])
